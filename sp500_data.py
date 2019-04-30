@@ -10,8 +10,8 @@ def get_sp500_timeseries(start_date, end_date, retrieve_new_data=False):
 
     # save s&p500 ticker data to a dictionary if necessary or updated data is
     # desired
-    sp500_ticker_fname = './sp500_ticker_data_%s_%s'%(start_date.isoformat(), 
-						      end_date.isoformat())
+    sp500_ticker_fname = 'TickerData/sp500_ticker_data_%s_%s'%(start_date.isoformat(), 
+						      	       end_date.isoformat())
     if not os.path.exists(sp500_ticker_fname) or retrieve_new_data:
         sp500_dict, count = {}, 0
         
